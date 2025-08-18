@@ -707,3 +707,59 @@ puma (5.6.9) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
 puma (5.6.9) lib/puma/request.rb:76:in `handle_request'
 puma (5.6.9) lib/puma/server.rb:443:in `process_client'
 puma (5.6.9) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/school_classes" for 127.0.0.1 at 2025-08-18 11:03:11 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SchoolClassesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering school_classes/index.html.erb within layouts/application
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT "school_classes".* FROM "school_classes"[0m
+  Rendered school_classes/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 3762)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 12411)
+Completed 200 OK in 21ms (Views: 17.3ms | ActiveRecord: 0.2ms | Allocations: 16987)
+
+
+Started GET "/school_classes/new" for 127.0.0.1 at 2025-08-18 11:03:15 -0400
+Processing by SchoolClassesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering school_classes/new.html.erb within layouts/application
+  Rendered school_classes/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1599)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1680)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2330)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `posts_path' for an instance of #<Class:0x0000000127e11540>):
+    1: <%= form_tag posts_path do %>
+    2:   <label>School Class title:</label><br>
+    3:   <%= text_field_tag :title %><br>
+    4: 
+  
+app/views/school_classes/new.html.erb:1
+Started GET "/school_classes/new" for 127.0.0.1 at 2025-08-18 11:04:03 -0400
+Processing by SchoolClassesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering school_classes/new.html.erb within layouts/application
+  Rendered school_classes/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 547)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4598)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 5851)
+
+
+Started GET "/school_classes/new" for 127.0.0.1 at 2025-08-18 11:04:44 -0400
+Processing by SchoolClassesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering school_classes/new.html.erb within layouts/application
+  Rendered school_classes/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 491)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4459)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 5700)
+
+
+Started GET "/school_classes/new" for 127.0.0.1 at 2025-08-18 11:07:11 -0400
+Processing by SchoolClassesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering school_classes/new.html.erb within layouts/application
+  Rendered school_classes/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1064)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 5033)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 6283)
+
+
