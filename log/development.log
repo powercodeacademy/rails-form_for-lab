@@ -1094,3 +1094,173 @@ Processing by SchoolClassesController#show as HTML
 Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.1ms | Allocations: 4563)
 
 
+Started GET "/students/" for 127.0.0.1 at 2025-08-18 11:18:56 -0400
+Processing by StudentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 2927)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 6913)
+Completed 200 OK in 17ms (Views: 13.7ms | ActiveRecord: 1.0ms | Allocations: 8475)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2025-08-18 11:19:08 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3877)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.3ms | Allocations: 4708)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2025-08-18 11:19:27 -0400
+Processing by StudentsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 668)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 4637)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 5901)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2025-08-18 11:19:37 -0400
+Processing by StudentsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4567)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 5815)
+
+
+Started POST "/students" for 127.0.0.1 at 2025-08-18 11:19:45 -0400
+Processing by StudentsController#create as HTML
+  Parameters: {"authenticity_token"=>"IO6N-XBFtVeh0p1_uRgS4K_HU3HTWYgEE9KJ88afGjUShVl5EB3YP2qWZ1xWpXAOwiBYZjOVnAr8JZX0aXgp6Q", "student"=>{"first_name"=>"Nihar", "last_name"=>"Patel"}, "commit"=>"Create School class"}
+[31mUnpermitted parameters: :first_name, :last_name[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.7ms)[0m  [1m[32mINSERT INTO "students" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2025-08-18 15:19:45.266775"], ["updated_at", "2025-08-18 15:19:45.266775"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/students/9
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms | Allocations: 842)
+
+
+Started GET "/students/9" for 127.0.0.1 at 2025-08-18 11:19:45 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 105)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 3871)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms | Allocations: 4560)
+
+
+Started GET "/students/9" for 127.0.0.1 at 2025-08-18 11:20:54 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 107)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4085)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.2ms | Allocations: 5423)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2025-08-18 11:20:58 -0400
+Processing by StudentsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 585)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 4350)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 4936)
+
+
+Started POST "/students" for 127.0.0.1 at 2025-08-18 11:21:04 -0400
+Processing by StudentsController#create as HTML
+  Parameters: {"authenticity_token"=>"qobCSPO_E3QiJ8QozBurGOfrFZ-jha4F6E4F5aEzaQWY7RbIk-d-HOljPgsjpsn2igweiENJugsHuRniDtRa2Q", "student"=>{"first_name"=>"Nihar", "last_name"=>"Patel"}, "commit"=>"Create Student"}
+[31mUnpermitted parameters: :first_name, :last_name[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.8ms)[0m  [1m[32mINSERT INTO "students" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2025-08-18 15:21:04.830792"], ["updated_at", "2025-08-18 15:21:04.830792"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/students/10
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms | Allocations: 704)
+
+
+Started GET "/students/10" for 127.0.0.1 at 2025-08-18 11:21:04 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3850)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 4396)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2025-08-18 11:22:01 -0400
+Processing by StudentsController#new as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering layout layouts/application.html.erb
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 537)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 4409)
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.5ms | Allocations: 7920)
+
+
+Started POST "/students" for 127.0.0.1 at 2025-08-18 11:22:10 -0400
+Processing by StudentsController#create as HTML
+  Parameters: {"authenticity_token"=>"3W6Ket3YMQqDKN73Mih2Am1ckrHJiZwjEV2QkrrJPfbvBV76vYBcYkhsJNTdlRTsALuZpilFiC3-qoyVFS4OKg", "student"=>{"first_name"=>"Nihar", "last_name"=>"Patel"}, "commit"=>"Create Student"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Nihar"], ["last_name", "Patel"], ["created_at", "2025-08-18 15:22:10.019675"], ["updated_at", "2025-08-18 15:22:10.019675"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/students/11
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms | Allocations: 888)
+
+
+Started GET "/students/11" for 127.0.0.1 at 2025-08-18 11:22:10 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 3777)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.2ms | Allocations: 4530)
+
+
+Started GET "/students/11" for 127.0.0.1 at 2025-08-18 11:22:44 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 119)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4097)
+Completed 200 OK in 14ms (Views: 10.3ms | ActiveRecord: 0.4ms | Allocations: 5442)
+
+
+Started GET "/student_classes/new" for 127.0.0.1 at 2025-08-18 11:23:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/student_classes/new"):
+  
+Started GET "/student_class/new" for 127.0.0.1 at 2025-08-18 11:23:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/student_class/new"):
+  
+Started GET "/student_class" for 127.0.0.1 at 2025-08-18 11:23:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/student_class"):
+  
+Started GET "/student_classes" for 127.0.0.1 at 2025-08-18 11:23:30 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/student_classes"):
+  
+Started GET "/school_classes/new" for 127.0.0.1 at 2025-08-18 11:23:42 -0400
+Processing by SchoolClassesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering school_classes/new.html.erb within layouts/application
+  Rendered school_classes/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 745)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4796)
+Completed 200 OK in 16ms (Views: 9.8ms | ActiveRecord: 0.7ms | Allocations: 8444)
+
+
