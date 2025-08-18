@@ -1,0 +1,13 @@
+<h1>School Classes</h1>
+
+<ul>
+  <% @school_classes.each do |school_class| %>
+    <% unless school_class.archived? %>
+      <li>
+        <%= link_to school_class.title, school_class %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
+
+<%= link_to "New School Class", new_school_class_path %>
